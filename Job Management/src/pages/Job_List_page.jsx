@@ -22,6 +22,7 @@ const Job_List_page = () => {
   const [jobTypeFilter, setJobTypeFilter] = useState("");
   const [minValue, setMinValue] = useState(400000);
   const [maxValue, setMaxValue] = useState(2000000);
+  const [loading, setLoading] = useState(true);
   
   
 const location = useLocation();
@@ -32,12 +33,15 @@ const location = useLocation();
 
   useEffect(() => {
   async function fetchJobs() {
+    setLoading(true);
     try {
       const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/jobs`);
       setJobs(response.data);
       console.log("Jobs loaded:", response.data);
     } catch (error) {
       console.error("Error fetching jobs:", error);
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -148,7 +152,13 @@ const location = useLocation();
 }
 
 
-  console.log(filteredJobs);
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-blue-500"></div>
+      </div>
+    );
+  }
   return (
     <div className="job_list_page">
       {/* Filter Section */}
