@@ -7,16 +7,22 @@ const Navbar = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleNavClick = (path) => {
-    setIsOpen(false); // close menu on mobile
+  const handleNavClick = (path, isModal = false) => {
+  setIsOpen(false);
+  if (isModal) {
+    // only send background state when opening modal
     navigate(path, { state: { background: location } });
-  };
+  } else {
+    navigate(path);
+  }
+};
+
 
   return (
     <nav className="p-4">
       {/* Main navbar container */}
       <div
-        className="flex justify-between items-center
+        className="flex justify-between lg:justify-center lg:gap-14 items-center
         p-4 rounded-full shadow-lg bg-white
         m-auto lg:w-[56rem] lg:h-[5.625rem] md:w-[38rem] md:h-[3.814rem]"
       >
@@ -30,7 +36,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex justify-around items-center gap-6">
+        <ul className="hidden md:flex justify-around items-center lg:gap-14 md:gap-7">
           <li
             className="px-4 py-2 hover:shadow-xl font-medium transition ease-in-out duration-300 rounded-xl cursor-pointer"
             onClick={() => handleNavClick("/")}
@@ -39,26 +45,26 @@ const Navbar = () => {
           </li>
           <li
             className="px-4 py-2 hover:shadow-xl font-medium transition ease-in-out duration-300 rounded-xl cursor-pointer"
-            onClick={() => handleNavClick("/jobs")}
+            
           >
             Find Jobs
           </li>
           <li
             className="px-4 py-2 hover:shadow-xl font-medium transition ease-in-out duration-300 rounded-xl cursor-pointer"
-            onClick={() => handleNavClick("/talents")}
+            
           >
             Find Talents
           </li>
           <li
             className="px-4 py-2 hover:shadow-xl font-medium transition ease-in-out duration-300 rounded-xl cursor-pointer"
-            onClick={() => handleNavClick("/testimonials")}
+            
           >
             Testimonials
           </li>
           <li>
             <div className="p-1 hover:shadow-xl hover:bg-[#bfb9b93f] transition ease-in-out duration-300 rounded-xl">
               <button
-                onClick={() => handleNavClick("/create")}
+                onClick={() => handleNavClick("/create", true)}
                 className="px-4 py-2 bg-gradient-to-b from-[#A128FF] to-[#6100AD] text-white rounded-full"
               >
                 Create Jobs
@@ -105,7 +111,7 @@ const Navbar = () => {
           </li>
           <li>
             <button
-              onClick={() => handleNavClick("/create")}
+              onClick={() => handleNavClick("/create" , true)}
               className="w-full px-4 py-2 bg-gradient-to-b from-[#A128FF] to-[#6100AD] text-white rounded-full"
             >
               Create Jobs
