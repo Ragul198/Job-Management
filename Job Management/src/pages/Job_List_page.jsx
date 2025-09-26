@@ -28,11 +28,12 @@ const location = useLocation();
   const min = 200000;
   const max = 3000000;
   const [job, setJobs] = useState([]);
+  
 
   useEffect(() => {
   async function fetchJobs() {
     try {
-      const response = await axios.get("http://localhost:5000/jobs");
+      const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/jobs`);
       setJobs(response.data);
       console.log("Jobs loaded:", response.data);
     } catch (error) {
