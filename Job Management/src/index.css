@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+/* Slider thumb styles */
+/* Range slider styles */
+.range-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 24 px;
+  background: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  pointer-events: none;
+  outline: none;
+}
+
+.range-input::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 19px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fcfcfc;
+  border: 7.5px solid rgb(0, 0, 0);
+  padding: 1px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  pointer-events: all;
+  position: relative;
+  z-index: 10;
+}
+
+.range-input::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #1f2937;
+  border: 2px solid white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  pointer-events: all;
+  border: none;
+}
+
+.range-input::-webkit-slider-track {
+  background: transparent;
+  height: 6px;
+}
+
+.range-input::-moz-range-track {
+  background: transparent;
+  height: 6px;
+  border: none;
+  outline: none;
+}
+
+.range-input-min {
+  z-index: 2;
+}
+
+.range-input-max {
+  z-index: 3;
+}
