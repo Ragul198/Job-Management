@@ -4,7 +4,7 @@ require('dotenv').config();
 
 const jobs = [
   {
-    companyLogo: "https://i.ibb.co/ZpvqC1tN/3c2e280a3eff5d7381303c181d3f7a5a7778aa27.png",
+    companyLogo: "Tesla",
     location: "Mumbai",
     jobtype: "Part Time",
     companyName: "Tesla",
@@ -18,7 +18,7 @@ const jobs = [
     ]
   },
   {
-    companyLogo: "https://i.ibb.co/wZXH3yYQ/7e07718c0675defaeb592dd304b61e51d286bcfc.png",
+    companyLogo: "Swiggy",
     location: "Bangalore",
     jobtype: "Contract",
     companyName: "Swiggy",
@@ -32,7 +32,7 @@ const jobs = [
     ]
   },
   {
-    companyLogo: "https://i.ibb.co/tPh2fPts/a96acfcadfa915e57e5d15e9fa0669560844f362.png",
+    companyLogo: "Amazon",
     location: "Delhi",
     jobtype: "Full Time",
     companyName: "Amazon",
@@ -46,7 +46,7 @@ const jobs = [
     ]
   },
   {
-    companyLogo: "https://i.ibb.co/ZpvqC1tN/3c2e280a3eff5d7381303c181d3f7a5a7778aa27.png",
+    companyLogo: "Tesla",
     location: "Pune",
     jobtype: "Internship",
     companyName: "Tesla",
@@ -60,7 +60,7 @@ const jobs = [
     ]
   },
   {
-    companyLogo: "https://i.ibb.co/wZXH3yYQ/7e07718c0675defaeb592dd304b61e51d286bcfc.png",
+    companyLogo: "Swiggy",
     location: "Hyderabad",
     jobtype: "Full Time",
     companyName: "Swiggy",
@@ -74,7 +74,7 @@ const jobs = [
     ]
   },
   {
-    companyLogo: "https://i.ibb.co/tPh2fPts/a96acfcadfa915e57e5d15e9fa0669560844f362.png",
+    companyLogo: "Amazon",
     location: "Chennai",
     jobtype: "Contract",
     companyName: "Amazon",
@@ -88,7 +88,7 @@ const jobs = [
     ]
   },
   {
-    companyLogo: "https://i.ibb.co/ZpvqC1tN/3c2e280a3eff5d7381303c181d3f7a5a7778aa27.png",
+    companyLogo: "Tesla",
     location: "Kolkata",
     jobtype: "Full Time",
     companyName: "Tesla",
@@ -102,7 +102,7 @@ const jobs = [
     ]
   },
   {
-    companyLogo: "https://i.ibb.co/wZXH3yYQ/7e07718c0675defaeb592dd304b61e51d286bcfc.png",
+    companyLogo: "Swiggy",
     location: "Ahmedabad",
     jobtype: "Part Time",
     companyName: "Swiggy",
@@ -116,7 +116,7 @@ const jobs = [
     ]
   },
   {
-    companyLogo: "https://i.ibb.co/tPh2fPts/a96acfcadfa915e57e5d15e9fa0669560844f362.png",
+    companyLogo: "Amazon",
     location: "Jaipur",
     jobtype: "Internship",
     companyName: "Amazon",
@@ -130,7 +130,7 @@ const jobs = [
     ]
   },
   {
-    companyLogo: "https://i.ibb.co/ZpvqC1tN/3c2e280a3eff5d7381303c181d3f7a5a7778aa27.png",
+    companyLogo: "Tesla",
     location: "Chennai",
     jobtype: "Full Time",
     companyName: "Tesla",

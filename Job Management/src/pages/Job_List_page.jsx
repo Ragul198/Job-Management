@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 
-import { Country, State, City } from "country-state-city";
 import { IoIosSearch } from "react-icons/io";
 import { CiLocationOn } from "react-icons/ci";
 import Icon from "@mdi/react";
@@ -262,15 +261,15 @@ const location = useLocation();
   <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
     {filteredJobs.map((job) => (
       <div
-        key={job.id}
+        key={job._id}
         className="bg-white rounded-xl shadow-sm border border-gray-200 flex flex-col justify-between p-4 sm:p-6 hover:shadow-md transition-shadow duration-200 h-auto sm:h-[360px]"
       >
         {/* Header */}
         <div className="flex items-start justify-between mb-3 sm:mb-4">
           <div className="p-2 bg-gradient-to-b from-[#FEFEFD] to-[#F1F1F1] rounded-2xl shadow-md">
-            {job.companyLogo ? (
+            {job.companyName ? (
               <img
-              src={job.companyLogo ? job.companyLogo : amazon}
+              src={job.companyLogo=="Amazon"?amazon:job.companyLogo=="Tesla"?tesla:job.companyLogo=="Swiggy"?swiggy:amazon} 
               className="w-12 h-12 sm:w-[66px] sm:h-[66px] bg-white rounded-full p-1"
               alt={job.companyName}
             />  
