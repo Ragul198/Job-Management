@@ -29,6 +29,11 @@ app.get('/jobs', async (req, res) => {
   }
 });
 
+// Health check endpoint
+app.get('/ping', (req, res) => {
+  res.send('pong');
+});
+
 // Add new job
 // Add new job
 app.post('/jobs', async (req, res) => {
